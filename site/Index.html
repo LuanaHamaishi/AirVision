@@ -5,81 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<style>
-
-    *{
-      margin: 0!important;
-      padding: 0;
-    }
-    body {
-      box-sizing:content-box; 
-      background-color: #222831;
-    }
-
-    /* NavBar */
-    .container-nav {
-        display: -webkit-box;
-        display: flex;
-        justify-content: space-around;
-        -webkit-box-align: center;
-            align-items: center;
-        background-color: black;
-        margin: 25px 0;
-        box-shadow: 0 5px 15px -10px #111;
-    }
-    .logo {
-        -webkit-box-ordinal-group: 1;
-            order: 1;
-        border-radius: 100%;
-        background: #4382d6;
-        box-shadow: 0 0 0 3px #fff, 000 15px #111;
-        line-height: 32px;
-        padding: 42px;
-        background-image: url(./AirVision.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .item {
-        color: rgba(255, 255, 255, 0.88);
-        text-decoration: none;
-        font-family: sans-serif;
-        padding: 24px;
-    }
-    .item:hover{
-        
-        color: #4382d6;
-        background: rgba(255, 255, 255, 0.15);
-    }
-
-    .item:nth-of-type(n+4) {
-  -webkit-box-ordinal-group: 3;
-          order: 2;
-
-    }
-    @media all and (maxwidth: 800px){
-        .container {
-            -webkit-box-orient: vertical ;
-            -webkit-box-direction: normal;
-                flex-direction: column;
-            -webkit-box-align: stretch;
-                align-items: stretch;
-        }
-        .logo {
-            -webkit-box-ordinal-group: 1;
-                order: 0;
-            text-align: center;
-            width: 100px;
-            margin: auto auto 20px;
-
-        }
-        .item {
-            text-align: center;
-            border-bottom: 1px solid #111;
-        }
-    }
-</style>
 <body>
     
 <header>
@@ -97,5 +25,60 @@
     </div>
 </header>
 
+<div id="items-wrapper " style="padding: 0px ; height: 0px;">
+    <br>
+    <p>
+      <h1 class="font-carrosel">Inovando e Transformando!</h1>
+    </p>
+</div>
+    <div id="items-carrosel">
+      <div class="item-carrosel"><img class="img-carrosel" src="https://blog.midianoalvo.com.br/wp-content/uploads/2019/12/pessoas-dentro-de-um-aeroporto-900x506.jpg"/></div>
+      <div class="item-carrosel"><img class="img-carrosel" src="https://i.em.com.br/7KdXJfX_ijU6u2ILO7k4GC1hPQ4=/790x/smart/imgsapp.em.com.br/app/noticia_127983242361/2022/01/10/1336624/terminal-do-aeroporto_1_57198.jpg"/></div>
+      <div class="item-carrosel"><img class="img-carrosel" src="https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/302231/39ac331079912d9e14567207eaee5cf9fotogugamatosaeroporto005/0,72,2560,1528/1206,720,0.18/0/default.jpg"/></div>
+    </div>
+  </div>
+
+<!-- dsahdskjahdsjkahdjkashdksa speearançado -->
+
+
+    <footer>
+        <div class="footer-content">
+            <h3>Mussum impsum</h3>
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.</p>
+            <ul class="socials">
+                <li><a href="#" class="fa fa-github"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Todos os direitos reservados &copy;2022 <a href="#"> SkyVison</a></p>
+        </div>
+    </footer>
+
+
 </body>
 </html>
+<script>
+  
+  const scrollWheel = event => {
+  if(event.deltaY < 0){
+      event.target.scrollBy(300, 0)
+    }
+    else{
+      event.target.scrollBy(-300, 0)
+    }
+}
+
+document.querySelector("#items-carrosel")
+  .addEventListener("wheel", scrollWheel)
+
+let count = 0
+setInterval(function(){
+  count += 400
+  if(count > 8000) count = 0
+  document.querySelector("#items-carrosel").scrollTo(count, 0)
+  console.log('moveu')
+}, 1500)
+
+</script>
