@@ -1,0 +1,10 @@
+.container {
+        display: -webkit-box;
+        display: flex;
+        justify-content: space-around;
+        -webkit-box-align: center;
+            align-items: center;
+        background-color: black;
+        margin: 25px 0;
+        box-shadow: 0 5px 15px -10px #111;
+}
