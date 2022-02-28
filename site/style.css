@@ -72,13 +72,14 @@
 
   /* Carrosel */
 
+
+
   .font-carrosel {
     z-index: 2;
     color: #fff;
     position: absolute;
     text-align: center;
     width: 100vw;
-    height: 400px;
     padding-top: 165px;
     text-shadow: 0 1px 0 rgb(0, 204, 255),
                  0 2px 0 #0972d4,
@@ -128,7 +129,9 @@
   /* Footer */
 
   footer {
-
+        position: absolute;
+        bottom: 0;
+        width: 100%;
         background: #111;
         padding-top: 40px;
         color: #fff;
