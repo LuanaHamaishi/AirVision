@@ -72,14 +72,11 @@
 
   /* Carrosel */
 
-
-
   .font-carrosel {
     z-index: 2;
     color: #fff;
     position: absolute;
     text-align: center;
-    width: 100vw;
     padding-top: 165px;
     text-shadow: 0 1px 0 rgb(0, 204, 255),
                  0 2px 0 #0972d4,
@@ -126,12 +123,32 @@
     object-fit: cover;
   }
 
+  /* Conteudo */
+
+  .container {
+    justify-content: center;
+    display: flex;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    }
+
+
+
+    .content{
+      width: 80vw;
+      height: 100vh;
+      background-color:rgba(116, 137, 196, 0.205);
+      border-radius: 50px;
+      padding: 3vh;
+
+    }
+    .content h2{
+        color: rgb(247, 228, 203);
+    }
   /* Footer */
 
   footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+
         background: #111;
         padding-top: 40px;
         color: #fff;
